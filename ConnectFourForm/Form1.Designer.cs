@@ -42,9 +42,14 @@
             this.buttonExit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+
+
+            Color panelColor = System.Drawing.Color.FromArgb(0,0,0,0);
+            
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.column7);
             this.panel1.Controls.Add(this.column6);
             this.panel1.Controls.Add(this.column5);
@@ -61,84 +66,91 @@
             // column7
             // 
             this.column7.BackColor = System.Drawing.Color.Transparent;
+            this.column7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.column7.Location = new System.Drawing.Point(412, 4);
             this.column7.Margin = new System.Windows.Forms.Padding(0);
             this.column7.Name = "column7";
             this.column7.Size = new System.Drawing.Size(64, 404);
             this.column7.TabIndex = 6;
-            this.column7.Text = "column7";
+            //this.column7.Text = "column7";
             this.column7.UseVisualStyleBackColor = false;
             this.column7.Click += new System.EventHandler(this.column7_Click);
             // 
             // column6
             // 
             this.column6.BackColor = System.Drawing.Color.Transparent;
+            this.column6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.column6.Location = new System.Drawing.Point(344, 4);
             this.column6.Margin = new System.Windows.Forms.Padding(0);
             this.column6.Name = "column6";
             this.column6.Size = new System.Drawing.Size(64, 404);
             this.column6.TabIndex = 5;
-            this.column6.Text = "column6";
+            //this.column6.Text = "column6";
             this.column6.UseVisualStyleBackColor = false;
             this.column6.Click += new System.EventHandler(this.column6_Click);
             // 
             // column5
             // 
             this.column5.BackColor = System.Drawing.Color.Transparent;
+            this.column5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.column5.Location = new System.Drawing.Point(276, 4);
             this.column5.Margin = new System.Windows.Forms.Padding(0);
             this.column5.Name = "column5";
             this.column5.Size = new System.Drawing.Size(64, 404);
             this.column5.TabIndex = 4;
-            this.column5.Text = "column5";
+            //this.column5.Text = "column5";
             this.column5.UseVisualStyleBackColor = false;
             this.column5.Click += new System.EventHandler(this.column5_Click);
             // 
             // column4
             // 
             this.column4.BackColor = System.Drawing.Color.Transparent;
+            this.column4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.column4.Location = new System.Drawing.Point(208, 4);
             this.column4.Margin = new System.Windows.Forms.Padding(0);
             this.column4.Name = "column4";
             this.column4.Size = new System.Drawing.Size(64, 404);
             this.column4.TabIndex = 3;
-            this.column4.Text = "column4";
+            //this.column4.Text = "column4";
             this.column4.UseVisualStyleBackColor = false;
             this.column4.Click += new System.EventHandler(this.column4_Click);
             // 
             // column3
             // 
             this.column3.BackColor = System.Drawing.Color.Transparent;
+            this.column3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.column3.Location = new System.Drawing.Point(140, 4);
             this.column3.Margin = new System.Windows.Forms.Padding(0);
             this.column3.Name = "column3";
             this.column3.Size = new System.Drawing.Size(64, 404);
             this.column3.TabIndex = 2;
-            this.column3.Text = "column3";
+            //this.column3.Text = "column3";
             this.column3.UseVisualStyleBackColor = false;
             this.column3.Click += new System.EventHandler(this.column3_Click);
             // 
             // column2
             // 
             this.column2.BackColor = System.Drawing.Color.Transparent;
+            this.column2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.column2.Location = new System.Drawing.Point(72, 4);
             this.column2.Margin = new System.Windows.Forms.Padding(0);
             this.column2.Name = "column2";
             this.column2.Size = new System.Drawing.Size(64, 404);
             this.column2.TabIndex = 1;
-            this.column2.Text = "column2";
+            //this.column2.Text = "column2";
             this.column2.UseVisualStyleBackColor = false;
             this.column2.Click += new System.EventHandler(this.column2_Click);
             // 
             // column1
             // 
             this.column1.BackColor = System.Drawing.Color.Transparent;
+            this.column1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.column1.Location = new System.Drawing.Point(4, 4);
             this.column1.Margin = new System.Windows.Forms.Padding(0);
             this.column1.Name = "column1";
             this.column1.Size = new System.Drawing.Size(64, 404);
             this.column1.TabIndex = 0;
-            this.column1.Text = "column1";
+            //this.column1.Text = "column1";
             this.column1.UseVisualStyleBackColor = false;
             this.column1.Click += new System.EventHandler(this.column1_Click);
             // 
