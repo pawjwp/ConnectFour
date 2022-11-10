@@ -1,0 +1,17 @@
+C:\Users\Jeremy\Source\Repos\ConnectFour\ConnectFourForm\bin\Debug\net6.0-windows\ConnectFourForm.exe
+C:\Users\Jeremy\Source\Repos\ConnectFour\ConnectFourForm\bin\Debug\net6.0-windows\ConnectFourForm.deps.json
+C:\Users\Jeremy\Source\Repos\ConnectFour\ConnectFourForm\bin\Debug\net6.0-windows\ConnectFourForm.runtimeconfig.json
+C:\Users\Jeremy\Source\Repos\ConnectFour\ConnectFourForm\bin\Debug\net6.0-windows\ConnectFourForm.dll
+C:\Users\Jeremy\Source\Repos\ConnectFour\ConnectFourForm\bin\Debug\net6.0-windows\ConnectFourForm.pdb
+C:\Users\Jeremy\Source\Repos\ConnectFour\ConnectFourForm\obj\Debug\net6.0-windows\ConnectFourForm.csproj.AssemblyReference.cache
+C:\Users\Jeremy\Source\Repos\ConnectFour\ConnectFourForm\obj\Debug\net6.0-windows\ConnectFourForm.Form1.resources
+C:\Users\Jeremy\Source\Repos\ConnectFour\ConnectFourForm\obj\Debug\net6.0-windows\ConnectFourForm.csproj.GenerateResource.cache
+C:\Users\Jeremy\Source\Repos\ConnectFour\ConnectFourForm\obj\Debug\net6.0-windows\ConnectFourForm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jeremy\Source\Repos\ConnectFour\ConnectFourForm\obj\Debug\net6.0-windows\ConnectFourForm.AssemblyInfoInputs.cache
+C:\Users\Jeremy\Source\Repos\ConnectFour\ConnectFourForm\obj\Debug\net6.0-windows\ConnectFourForm.AssemblyInfo.cs
+C:\Users\Jeremy\Source\Repos\ConnectFour\ConnectFourForm\obj\Debug\net6.0-windows\ConnectFourForm.csproj.CoreCompileInputs.cache
+C:\Users\Jeremy\Source\Repos\ConnectFour\ConnectFourForm\obj\Debug\net6.0-windows\ConnectFourForm.dll
+C:\Users\Jeremy\Source\Repos\ConnectFour\ConnectFourForm\obj\Debug\net6.0-windows\refint\ConnectFourForm.dll
+C:\Users\Jeremy\Source\Repos\ConnectFour\ConnectFourForm\obj\Debug\net6.0-windows\ConnectFourForm.pdb
+C:\Users\Jeremy\Source\Repos\ConnectFour\ConnectFourForm\obj\Debug\net6.0-windows\ConnectFourForm.genruntimeconfig.cache
+C:\Users\Jeremy\Source\Repos\ConnectFour\ConnectFourForm\obj\Debug\net6.0-windows\ref\ConnectFourForm.dll

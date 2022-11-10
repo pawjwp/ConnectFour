@@ -15,3 +15,38 @@ namespace ConnectFourForm
         }
     }
 }
+/*
+using System;
+using System.Windows.Forms;
+using System.Drawing;
+
+namespace FormsApplication
+{
+    class WindowsApp
+    {
+        static void Main()
+        {
+            Form SimpleForm = new FormsByHand();
+            Application.Run(SimpleForm);
+        }
+    }
+    public class FormsByHand : Form
+    {
+        private Button column1;
+        public FormsByHand()
+        {
+            this.Text = "Forms By Hand";
+            column1 = new Button();
+            column1.Location = new Point(96, 112);
+            column1.Size = new Size(72, 24);
+            column1.Text = "Status";
+            this.Controls.Add(column1);
+            column1.Click += new EventHandler(column1_Click);
+        }
+        void column1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Up and Running");
+        }
+    }
+}
+*/
