@@ -19,7 +19,7 @@ namespace ConnectFourForm
 
         Board board = new Board();
 
-        board.PrintBoard();
+        //board.PrintBoard();
 
 
         public Form1()
@@ -76,6 +76,15 @@ namespace ConnectFourForm
             selectedColumn = 1;
         }
 
+        private void column7_MouseEnter(object sender, EventArgs e)
+        {
+            column7.BackColor = Color.White;
+        }
+        private void column7_MouseLeave(object sender, EventArgs e)
+        {
+            column7.BackColor = Color.White;
+        }
+
         private void column7_Click(object sender, EventArgs e)
         {
             MessageBox.Show("column7");
@@ -86,14 +95,40 @@ namespace ConnectFourForm
             MessageBox.Show("column6");
         }
 
+        private void column6_MouseEnter(object sender, EventArgs e)
+        {
+            column6.BackColor = Color.White;
+        }
+        private void column6_MouseLeave(object sender, EventArgs e)
+        {
+            column6.BackColor = Color.White;
+        }
+
         private void column5_Click(object sender, EventArgs e)
         {
             MessageBox.Show("column5");
         }
 
+        private void column5_MouseEnter(object sender, EventArgs e)
+        {
+            column5.BackColor = Color.White;
+        }
+        private void column5_MouseLeave(object sender, EventArgs e)
+        {
+            column5.BackColor = Color.White;
+        }
         private void column4_Click(object sender, EventArgs e)
         {
             MessageBox.Show("column4");
+        }
+
+        private void column4_MouseEnter(object sender, EventArgs e)
+        {
+            column4.BackColor = Color.White;
+        }
+        private void column4_MouseLeave(object sender, EventArgs e)
+        {
+            column4.BackColor = Color.White;
         }
 
         private void column3_Click(object sender, EventArgs e)
@@ -101,19 +136,45 @@ namespace ConnectFourForm
             MessageBox.Show("column3");
         }
 
+        private void column3_MouseEnter(object sender, EventArgs e)
+        {
+            column3.BackColor = Color.White;
+        }
+        private void column3_MouseLeave(object sender, EventArgs e)
+        {
+            column3.BackColor = Color.White;
+        }
+
         private void column2_Click(object sender, EventArgs e)
         {
             MessageBox.Show("column2");
         }
 
+        private void column2_MouseEnter(object sender, EventArgs e)
+        {
+            column2.BackColor = Color.White;
+        }
+        private void column2_MouseLeave(object sender, EventArgs e)
+        {
+            column2.BackColor = Color.White;
+        }
+
+
         private void column1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("column1");
         }
+
+        private void column1_MouseEnter(object sender, EventArgs e)
+        {
+            column1.BackColor = Color.White;
+        }
+        private void column1_MouseLeave(object sender, EventArgs e)
+        {
+            column1.BackColor = Color.White;
+        }
     }
 }
-
-
 
 /*
 namespace 
