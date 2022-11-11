@@ -1,0 +1,13 @@
+
+*.vsidx
+*.vsidx
+ConnectFourForm/obj/Debug/net6.0-windows/refint/ConnectFourForm.dll
+ConnectFourForm/obj/Debug/net6.0-windows/ref/ConnectFourForm.dll
+ConnectFourForm/obj/Debug/net6.0-windows/ConnectFourForm.pdb
+ConnectFourForm/obj/Debug/net6.0-windows/ConnectFourForm.dll
+ConnectFourForm/obj/Debug/net6.0-windows/ConnectFourForm.csproj.CoreCompileInputs.cache
+ConnectFourForm/bin/Debug/net6.0-windows/ConnectFourForm.pdb
+ConnectFourForm/bin/Debug/net6.0-windows/ConnectFourForm.dll
+.vs/ConnectFourForm/v17/.suo
+.vs/ConnectFourForm/v17/.futdcache.v2
+.vs/ConnectFourForm/DesignTimeBuild/.dtbcache.v2
