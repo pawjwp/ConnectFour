@@ -8,26 +8,27 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\epicd\\.nuget\\packages\\": {}
+    "C:\\Users\\Jeremy\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Core x86\\Documents\\C# Projects\\ConnectFour\\ConnectFourForm\\ConnectFourForm.csproj",
+      "projectUniqueName": "C:\\Users\\Jeremy\\Source\\Repos\\ConnectFour\\ConnectFourForm\\ConnectFourForm.csproj",
       "projectName": "ConnectFourForm",
-      "projectPath": "E:\\Core x86\\Documents\\C# Projects\\ConnectFour\\ConnectFourForm\\ConnectFourForm.csproj",
-      "packagesPath": "C:\\Users\\epicd\\.nuget\\packages\\",
-      "outputPath": "E:\\Core x86\\Documents\\C# Projects\\ConnectFour\\ConnectFourForm\\obj\\",
+      "projectPath": "C:\\Users\\Jeremy\\Source\\Repos\\ConnectFour\\ConnectFourForm\\ConnectFourForm.csproj",
+      "packagesPath": "C:\\Users\\Jeremy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Jeremy\\Source\\Repos\\ConnectFour\\ConnectFourForm\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\epicd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jeremy\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0-windows"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0-windows7.0": {
@@ -63,7 +64,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

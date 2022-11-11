@@ -2,7 +2,7 @@
 
 namespace ConnectFourForm
 {
-    internal class Board
+    public class Board
     {
         private char[,] board = new char[6, 7]
         {
@@ -19,21 +19,23 @@ namespace ConnectFourForm
             return board;
         }
 
-        public void PrintBoard()
+        public string PrintBoard()
         {
-            Console.WriteLine("\n╓─ ─┬─ ─┬─ ─┬─ ─┬─ ─┬─ ─┬─ ─╖");
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append("\n╓─ ─┬─ ─┬─ ─┬─ ─┬─ ─┬─ ─┬─ ─╖\n");
             for (int i = 0; i < board.GetLength(0); i++)
             {
-                Console.Write("║ ");
+                stringBuilder.Append("║ ");
                 for (int j = 0; j < board.GetLength(1); j++)
                 {
-                    Console.Write(board[i, j]);
-                    if (j < board.GetLength(1) - 1) Console.Write(" │ ");
+                    stringBuilder.Append(board[i, j]);
+                    if (j < board.GetLength(1) - 1) stringBuilder.Append(" │ ");
                 }
-                Console.Write(" ║");
-                Console.WriteLine();
+                stringBuilder.Append(" ║\n");
             }
-            Console.WriteLine("╙───┴───┴───┴───┴───┴───┴───╜");
+            stringBuilder.Append("╙───┴───┴───┴───┴───┴───┴───╜\n");
+
+            return stringBuilder.ToString();
         }
 
         public void EnterPiece(int column, char piece)
@@ -127,7 +129,7 @@ namespace ConnectFourForm
                 board[row,col] = set;
             }
             catch { } //throw error here later
-        }
+        }*/
 
         public void ResetBoard()
         {
@@ -139,7 +141,7 @@ namespace ConnectFourForm
                     board[i, j] = ' ';
                 }
             }
-        }*/
+        }
 
         public char[] LoadBoard(string filePath)
         {
