@@ -65,7 +65,7 @@ namespace ConnectFourForm
 
 
             PrintBoard();
-            
+
 
 
             if (player)
@@ -142,6 +142,15 @@ namespace ConnectFourForm
             board.SaveBoard(filePath, player, p1, p2);
         }
 
+        private void column7_MouseEnter(object sender, EventArgs e)
+        {
+            column7.BackColor = Color.White;
+        }
+        private void column7_MouseLeave(object sender, EventArgs e)
+        {
+            column7.BackColor = Color.White;
+        }
+
         private void column7_Click(object sender, EventArgs e)
         {
             clickColumn(7);
@@ -152,14 +161,40 @@ namespace ConnectFourForm
             clickColumn(6);
         }
 
+        private void column6_MouseEnter(object sender, EventArgs e)
+        {
+            column6.BackColor = Color.White;
+        }
+        private void column6_MouseLeave(object sender, EventArgs e)
+        {
+            column6.BackColor = Color.White;
+        }
+
         private void column5_Click(object sender, EventArgs e)
         {
             clickColumn(5);
         }
 
+        private void column5_MouseEnter(object sender, EventArgs e)
+        {
+            column5.BackColor = Color.White;
+        }
+        private void column5_MouseLeave(object sender, EventArgs e)
+        {
+            column5.BackColor = Color.White;
+        }
         private void column4_Click(object sender, EventArgs e)
         {
             clickColumn(4);
+        }
+
+        private void column4_MouseEnter(object sender, EventArgs e)
+        {
+            column4.BackColor = Color.White;
+        }
+        private void column4_MouseLeave(object sender, EventArgs e)
+        {
+            column4.BackColor = Color.White;
         }
 
         private void column3_Click(object sender, EventArgs e)
@@ -167,14 +202,42 @@ namespace ConnectFourForm
             clickColumn(3);
         }
 
+        private void column3_MouseEnter(object sender, EventArgs e)
+        {
+            column3.BackColor = Color.White;
+        }
+        private void column3_MouseLeave(object sender, EventArgs e)
+        {
+            column3.BackColor = Color.White;
+        }
+
         private void column2_Click(object sender, EventArgs e)
         {
             clickColumn(2);
         }
 
+        private void column2_MouseEnter(object sender, EventArgs e)
+        {
+            column2.BackColor = Color.White;
+        }
+        private void column2_MouseLeave(object sender, EventArgs e)
+        {
+            column2.BackColor = Color.White;
+        }
+
+
         private void column1_Click(object sender, EventArgs e)
         {
             clickColumn(1);
+        }
+
+        private void column1_MouseEnter(object sender, EventArgs e)
+        {
+            column1.BackColor = Color.White;
+        }
+        private void column1_MouseLeave(object sender, EventArgs e)
+        {
+            column1.BackColor = Color.White;
         }
     }
 }
