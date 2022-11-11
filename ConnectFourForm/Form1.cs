@@ -75,7 +75,6 @@ namespace ConnectFourForm
             winner = false;
             selectedColumn = 1;
         }
-
         private void column7_MouseEnter(object sender, EventArgs e)
         {
             column7.BackColor = Color.White;

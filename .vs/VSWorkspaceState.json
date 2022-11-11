@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ConnectFourForm",
+    "\\ConnectFourForm\\bin"
   ],
+  "SelectedNode": "\\ConnectFourForm\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }
