@@ -1,4 +1,5 @@
 using ConnectFourForm;
+using System.Drawing;
 using System.Numerics;
 using System.Reflection;
 using System.Text;
@@ -39,9 +40,34 @@ namespace ConnectFourForm
 
         public void PrintBoard()
         {
-            char[,] boardChars = new char[6, 7];
-            boardChars = board.GetBoard();
+            int boardX = 212;
+            int boardY = 16;
+            int pieceHeight = 64;
+            int pieceWidth = 64;
+            int marginHeight = 0;
+            int marginWidth = 0;
 
+            char[,] boardChars = board.GetBoard();
+
+            Graphics g = this.CreateGraphics();
+            SolidBrush p1 = new(Color.FromArgb(255, 0, 0));
+            SolidBrush p2 = new(Color.FromArgb(255, 223, 0));
+
+            for (int i = 0; i < board.GetLength(0); i++)
+            {
+                for (int j = 0; j < board.GetLength(1); j++)
+                {
+                    if (boardChars[i, j] == 'X') {
+                        g.FillEllipse(p1, new Rectangle((boardX + ((i) * pieceWidth) + ((i) * marginWidth)), (boardY + ((i) * pieceHeight) + ((i) * marginHeight)), pieceWidth, pieceHeight));
+                    }
+                    else
+                    {
+                        g.FillEllipse(p2, new Rectangle((boardX + ((i) * pieceWidth) + ((i) * marginWidth)), (boardY + ((i) * pieceHeight) + ((i) * marginHeight)), pieceWidth, pieceHeight));
+                    }
+                }
+            }
+
+            /*
             StringBuilder stringBuilder = new StringBuilder();
             for (int i = 0; i < board.GetLength(0); i++)
             {
@@ -52,8 +78,8 @@ namespace ConnectFourForm
                 stringBuilder.Append("\n");
             }
 
-
             MessageBox.Show(stringBuilder.ToString());
+            */
         }
 
         private void clickColumn(int column)
@@ -141,14 +167,6 @@ namespace ConnectFourForm
             filePath = Console.ReadLine();
             board.SaveBoard(filePath, player, p1, p2);
         }
-        private void column7_MouseEnter(object sender, EventArgs e)
-        {
-            column7.BackColor = Color.White;
-        }
-        private void column7_MouseLeave(object sender, EventArgs e)
-        {
-            column7.BackColor = Color.White;
-        }
 
         private void column7_Click(object sender, EventArgs e)
         {
@@ -160,40 +178,13 @@ namespace ConnectFourForm
             clickColumn(6);
         }
 
-        private void column6_MouseEnter(object sender, EventArgs e)
-        {
-            column6.BackColor = Color.White;
-        }
-        private void column6_MouseLeave(object sender, EventArgs e)
-        {
-            column6.BackColor = Color.White;
-        }
-
         private void column5_Click(object sender, EventArgs e)
         {
             clickColumn(5);
         }
-
-        private void column5_MouseEnter(object sender, EventArgs e)
-        {
-            column5.BackColor = Color.White;
-        }
-        private void column5_MouseLeave(object sender, EventArgs e)
-        {
-            column5.BackColor = Color.White;
-        }
         private void column4_Click(object sender, EventArgs e)
         {
             clickColumn(4);
-        }
-
-        private void column4_MouseEnter(object sender, EventArgs e)
-        {
-            column4.BackColor = Color.White;
-        }
-        private void column4_MouseLeave(object sender, EventArgs e)
-        {
-            column4.BackColor = Color.White;
         }
 
         private void column3_Click(object sender, EventArgs e)
@@ -201,27 +192,9 @@ namespace ConnectFourForm
             clickColumn(3);
         }
 
-        private void column3_MouseEnter(object sender, EventArgs e)
-        {
-            column3.BackColor = Color.White;
-        }
-        private void column3_MouseLeave(object sender, EventArgs e)
-        {
-            column3.BackColor = Color.White;
-        }
-
         private void column2_Click(object sender, EventArgs e)
         {
             clickColumn(2);
-        }
-
-        private void column2_MouseEnter(object sender, EventArgs e)
-        {
-            column2.BackColor = Color.White;
-        }
-        private void column2_MouseLeave(object sender, EventArgs e)
-        {
-            column2.BackColor = Color.White;
         }
 
 
@@ -230,6 +203,7 @@ namespace ConnectFourForm
             clickColumn(1);
         }
 
+        /*
         private void column1_MouseEnter(object sender, EventArgs e)
         {
             column1.BackColor = Color.White;
@@ -237,6 +211,6 @@ namespace ConnectFourForm
         private void column1_MouseLeave(object sender, EventArgs e)
         {
             column1.BackColor = Color.White;
-        }
+        }*/
     }
 }

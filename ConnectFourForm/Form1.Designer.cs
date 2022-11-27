@@ -42,14 +42,10 @@
             this.buttonExit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-
-
-            Color panelColor = System.Drawing.Color.FromArgb(0,0,0,0);
-            
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.column7);
             this.panel1.Controls.Add(this.column6);
             this.panel1.Controls.Add(this.column5);
@@ -72,11 +68,8 @@
             this.column7.Name = "column7";
             this.column7.Size = new System.Drawing.Size(64, 404);
             this.column7.TabIndex = 6;
-            //this.column7.Text = "column7";
             this.column7.UseVisualStyleBackColor = false;
             this.column7.Click += new System.EventHandler(this.column7_Click);
-            this.column7.MouseEnter += new System.EventHandler(this.column7_MouseEnter);
-            this.column7.MouseLeave += new System.EventHandler(this.column7_MouseLeave);
             // 
             // column6
             // 
@@ -87,11 +80,8 @@
             this.column6.Name = "column6";
             this.column6.Size = new System.Drawing.Size(64, 404);
             this.column6.TabIndex = 5;
-            //this.column6.Text = "column6";
             this.column6.UseVisualStyleBackColor = false;
             this.column6.Click += new System.EventHandler(this.column6_Click);
-            this.column6.MouseEnter += new System.EventHandler(this.column6_MouseEnter);
-            this.column6.MouseLeave += new System.EventHandler(this.column6_MouseLeave);
             // 
             // column5
             // 
@@ -102,11 +92,8 @@
             this.column5.Name = "column5";
             this.column5.Size = new System.Drawing.Size(64, 404);
             this.column5.TabIndex = 4;
-            //this.column5.Text = "column5";
             this.column5.UseVisualStyleBackColor = false;
             this.column5.Click += new System.EventHandler(this.column5_Click);
-            this.column5.MouseEnter += new System.EventHandler(this.column5_MouseEnter);
-            this.column5.MouseLeave += new System.EventHandler(this.column5_MouseLeave);
             // 
             // column4
             // 
@@ -117,11 +104,8 @@
             this.column4.Name = "column4";
             this.column4.Size = new System.Drawing.Size(64, 404);
             this.column4.TabIndex = 3;
-            //this.column4.Text = "column4";
             this.column4.UseVisualStyleBackColor = false;
             this.column4.Click += new System.EventHandler(this.column4_Click);
-            this.column4.MouseEnter += new System.EventHandler(this.column4_MouseEnter);
-            this.column4.MouseLeave += new System.EventHandler(this.column4_MouseLeave);
             // 
             // column3
             // 
@@ -132,11 +116,8 @@
             this.column3.Name = "column3";
             this.column3.Size = new System.Drawing.Size(64, 404);
             this.column3.TabIndex = 2;
-            //this.column3.Text = "column3";
             this.column3.UseVisualStyleBackColor = false;
             this.column3.Click += new System.EventHandler(this.column3_Click);
-            this.column3.MouseEnter += new System.EventHandler(this.column3_MouseEnter);
-            this.column3.MouseLeave += new System.EventHandler(this.column3_MouseLeave);
             // 
             // column2
             // 
@@ -147,11 +128,8 @@
             this.column2.Name = "column2";
             this.column2.Size = new System.Drawing.Size(64, 404);
             this.column2.TabIndex = 1;
-            //this.column2.Text = "column2";
             this.column2.UseVisualStyleBackColor = false;
             this.column2.Click += new System.EventHandler(this.column2_Click);
-            this.column2.MouseEnter += new System.EventHandler(this.column2_MouseEnter);
-            this.column2.MouseLeave += new System.EventHandler(this.column2_MouseLeave);
             // 
             // column1
             // 
@@ -162,11 +140,8 @@
             this.column1.Name = "column1";
             this.column1.Size = new System.Drawing.Size(64, 404);
             this.column1.TabIndex = 0;
-            //this.column1.Text = "column1";
             this.column1.UseVisualStyleBackColor = false;
             this.column1.Click += new System.EventHandler(this.column1_Click);
-            this.column1.MouseEnter += new System.EventHandler(this.column1_MouseEnter);
-            this.column1.MouseLeave += new System.EventHandler(this.column1_MouseLeave);
             // 
             // buttonNew
             // 
