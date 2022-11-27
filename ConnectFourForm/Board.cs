@@ -117,20 +117,6 @@ namespace ConnectFourForm
             }
         }
 
-        /*public void SetBoard(char[,] newBoard)
-        {
-            board = newBoard;
-        }
-
-        public void SetPlace(char set, int row, int col)
-        {
-            try
-            {
-                board[row,col] = set;
-            }
-            catch { } //throw error here later
-        }*/
-
         public void ResetBoard()
         {
             for (int i = 0; i < board.GetLength(0); i++)

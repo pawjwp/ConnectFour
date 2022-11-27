@@ -1,5 +1,6 @@
 using ConnectFourForm;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Numerics;
 using System.Reflection;
 using System.Text;
@@ -10,12 +11,28 @@ namespace ConnectFourForm
     {
         bool winner = false;
         bool player = true;
-        char p1 = 'X';
-        char p2 = 'O';
+        char p1 = '1';
+        char p2 = '2';
         char currentPlayer;
 
         string filePath;
         char[] settings;
+
+        int boardX;
+        int boardY;
+        int pieceHeight = 64;
+        int pieceWidth = 64;
+        int marginHeight = 4;
+        int marginWidth = 4;
+        int pieceBorder = 2;
+
+
+        Graphics g;
+
+        SolidBrush brush0;
+        SolidBrush brush1;
+        SolidBrush brush2;
+        SolidBrush currentBrush;
 
 
         Board board = new();
@@ -26,105 +43,96 @@ namespace ConnectFourForm
             InitializeComponent();
             if (player)
             {
-                Console.WriteLine("Player 1's turn (" + p1 + ")");
+                label1.Text = "Player 1's turn (Red)";
                 currentPlayer = p1;
             }
             else
             {
-                Console.WriteLine("Player 2's turn (" + p2 + ")");
+                label1.Text = "Player 2's turn (Yellow)";
                 currentPlayer = p2;
             }
+
+            g = panel1.CreateGraphics();
+            g.SmoothingMode = SmoothingMode.HighQuality;
+
+            brush0 = new(Color.FromArgb(0, 0, 0));
+            brush1 = new(Color.FromArgb(255, 0, 0));
+            brush2 = new(Color.FromArgb(255, 223, 0));
+
+            boardX = panel1.Location.X;
+            boardY = panel1.Location.Y;
 
             PrintBoard();
         }
 
         public void PrintBoard()
         {
-            int boardX = 212;
-            int boardY = 16;
-            int pieceHeight = 64;
-            int pieceWidth = 64;
-            int marginHeight = 0;
-            int marginWidth = 0;
-
+            int rectX;
+            int rectY;
             char[,] boardChars = board.GetBoard();
 
-            Graphics g = this.CreateGraphics();
-            SolidBrush p1 = new(Color.FromArgb(255, 0, 0));
-            SolidBrush p2 = new(Color.FromArgb(255, 223, 0));
-
+            g.Clear(panel1.BackColor);
             for (int i = 0; i < board.GetLength(0); i++)
             {
                 for (int j = 0; j < board.GetLength(1); j++)
                 {
-                    if (boardChars[i, j] == 'X') {
-                        g.FillEllipse(p1, new Rectangle((boardX + ((i) * pieceWidth) + ((i) * marginWidth)), (boardY + ((i) * pieceHeight) + ((i) * marginHeight)), pieceWidth, pieceHeight));
-                    }
-                    else
-                    {
-                        g.FillEllipse(p2, new Rectangle((boardX + ((i) * pieceWidth) + ((i) * marginWidth)), (boardY + ((i) * pieceHeight) + ((i) * marginHeight)), pieceWidth, pieceHeight));
+                    if (boardChars[i, j] == p1 || boardChars[i, j] == p2) {
+                        rectX = (((j) * pieceWidth) + ((j + 1) * marginWidth));
+                        rectY = (((i) * pieceHeight) + ((i + 1) * marginHeight));
+
+                        if (boardChars[i, j] == p1) currentBrush = brush1; else currentBrush = brush2;
+                        g.FillEllipse(brush0, new Rectangle(rectX, rectY, pieceWidth, pieceHeight));
+                        g.FillEllipse(currentBrush, new Rectangle(rectX + pieceBorder, rectY + pieceBorder, pieceWidth - (pieceBorder * 2), pieceHeight - (pieceBorder * 2)));
                     }
                 }
             }
-
-            /*
-            StringBuilder stringBuilder = new StringBuilder();
-            for (int i = 0; i < board.GetLength(0); i++)
-            {
-                for (int j = 0; j < board.GetLength(1); j++)
-                {
-                    stringBuilder.Append(boardChars[i, j]);
-                }
-                stringBuilder.Append("\n");
-            }
-
-            MessageBox.Show(stringBuilder.ToString());
-            */
         }
 
         private void clickColumn(int column)
         {
-            if (board.GetBoard()[0, column - 1] == ' ')
+            if (!winner)
             {
-                board.EnterPiece(column - 1, currentPlayer);
+                if (board.GetBoard()[0, column - 1] == ' ')
+                {
+                    board.EnterPiece(column - 1, currentPlayer);
+
+                    switch (board.CheckWin(currentPlayer))
+                    {
+                        case 0:
+                            label1.Text = "The board is full, game has tied.";
+                            winner = true;
+                            break;
+
+                        case 1:
+                            if (player) label1.Text = "Player 1 (Red) has won!";
+                            else label1.Text = "Player 2 (Yellow) has won!";
+
+                            winner = true;
+                            break;
+
+                        default:
+                            break;
+                    }
+
+                    if (!winner) player = !player;
+                }
+
+                if (!winner)
+                {
+                    if (player)
+                    {
+                        label1.Text = "Player 1's turn (Red)";
+                        currentPlayer = p1;
+                    }
+                    else
+                    {
+                        label1.Text = "Player 2's turn (Yellow)";
+                        currentPlayer = p2;
+                    }
+                }
+
+                PrintBoard();
             }
-
-
-            PrintBoard();
-
-
-
-            if (player)
-            {
-                Console.WriteLine("Player 1's turn (" + p1 + ")");
-                currentPlayer = p1;
-            }
-            else
-            {
-                Console.WriteLine("Player 2's turn (" + p2 + ")");
-                currentPlayer = p2;
-            }
-
-
-            switch (board.CheckWin(currentPlayer))
-            {
-                case 0:
-                    Console.WriteLine("The board is full, game has tied.");
-                    winner = true;
-                    break;
-
-                case 1:
-                    if (player) Console.WriteLine("Player 1 (" + p1 + ") has won!");
-                    else Console.WriteLine("Player 2 (" + p2 + ") has won!");
-
-                    winner = true;
-                    break;
-
-                default:
-                    break;
-            }
-
-            player = !player;
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
@@ -156,10 +164,11 @@ namespace ConnectFourForm
         {
             winner = false;
             player = true;
-            p1 = 'X';
-            p2 = 'O';
+            currentPlayer = p1;
 
             board.ResetBoard();
+            label1.Text = "Player 1's turn (Red)";
+            PrintBoard();
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
@@ -168,49 +177,15 @@ namespace ConnectFourForm
             board.SaveBoard(filePath, player, p1, p2);
         }
 
-        private void column7_Click(object sender, EventArgs e)
+        private void panel1_MouseUp(object sender, EventArgs e)
         {
-            clickColumn(7);
+            int x = this.PointToClient(Cursor.Position).X;
+            int y = this.PointToClient(Cursor.Position).Y;
+            int selectedColumn = (Convert.ToInt32(Math.Floor((Convert.ToDouble(x) - (boardX + (marginWidth / 2))) / (pieceWidth + marginWidth))) + 1);
+            if (1 <= selectedColumn && selectedColumn <= 7)
+            {
+                clickColumn(selectedColumn);
+            }
         }
-
-        private void column6_Click(object sender, EventArgs e)
-        {
-            clickColumn(6);
-        }
-
-        private void column5_Click(object sender, EventArgs e)
-        {
-            clickColumn(5);
-        }
-        private void column4_Click(object sender, EventArgs e)
-        {
-            clickColumn(4);
-        }
-
-        private void column3_Click(object sender, EventArgs e)
-        {
-            clickColumn(3);
-        }
-
-        private void column2_Click(object sender, EventArgs e)
-        {
-            clickColumn(2);
-        }
-
-
-        private void column1_Click(object sender, EventArgs e)
-        {
-            clickColumn(1);
-        }
-
-        /*
-        private void column1_MouseEnter(object sender, EventArgs e)
-        {
-            column1.BackColor = Color.White;
-        }
-        private void column1_MouseLeave(object sender, EventArgs e)
-        {
-            column1.BackColor = Color.White;
-        }*/
     }
 }
