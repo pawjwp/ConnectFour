@@ -169,5 +169,30 @@ namespace ConnectFourForm
 
             File.WriteAllLines(filePath, saveFile);
         }
+
+        public String[] CreateBoardFile(bool turn, char p1, char p2)
+        {
+            string[] saveFile = new string[7];
+
+            //set settings string
+            StringBuilder settings = new("", 3);
+            if (turn) settings.Append('1'); else settings.Append('0');
+            settings.Append(p1);
+            settings.Append(p2);
+            saveFile[0] = settings.ToString();
+
+            for (int i = 0; i < 6; i++)
+            {
+                StringBuilder rowBuilding = new("", 7);
+                for (int j = 0; j < 7; j++)
+                {
+                    rowBuilding.Append(board[i, j]);
+                }
+                saveFile[i + 1] = rowBuilding.ToString();
+            }
+
+            return saveFile;
+            //File.WriteAllLines(filePath, saveFile);
+        }
     }
 }

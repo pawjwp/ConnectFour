@@ -32,3 +32,4 @@ E:\Core x86\Documents\C# Projects\ConnectFour\ConnectFourForm\obj\Debug\net6.0-w
 E:\Core x86\Documents\C# Projects\ConnectFour\ConnectFourForm\obj\Debug\net6.0-windows\ConnectFourForm.pdb
 E:\Core x86\Documents\C# Projects\ConnectFour\ConnectFourForm\obj\Debug\net6.0-windows\ConnectFourForm.genruntimeconfig.cache
 E:\Core x86\Documents\C# Projects\ConnectFour\ConnectFourForm\obj\Debug\net6.0-windows\ref\ConnectFourForm.dll
+E:\Core x86\Documents\C# Projects\ConnectFour\ConnectFourForm\obj\Debug\net6.0-windows\ConnectFourForm.OpenFileForm.resources

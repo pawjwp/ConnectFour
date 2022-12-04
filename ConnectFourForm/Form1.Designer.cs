@@ -44,6 +44,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(480, 413);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
             // buttonNew
@@ -105,6 +106,7 @@
             this.label1.Size = new System.Drawing.Size(480, 28);
             this.label1.TabIndex = 6;
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
@@ -119,6 +121,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

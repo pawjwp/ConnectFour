@@ -142,15 +142,31 @@ namespace ConnectFourForm
 
         private void buttonLoad_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("\nEnter file path:");
-            filePath = Console.ReadLine();
+            var fileContent = string.Empty;
 
-            while (!File.Exists(filePath))
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                Console.WriteLine("Invalid input\nEnter valid file path:");
-                filePath = Console.ReadLine();
+                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                openFileDialog.FilterIndex = 2;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    //Get the path of specified file
+                    filePath = openFileDialog.FileName;
+
+                    //Read the contents of the file into a stream
+                    var fileStream = openFileDialog.OpenFile();
+
+                    using (StreamReader reader = new StreamReader(fileStream))
+                    {
+                        fileContent = reader.ReadToEnd();
+                    }
+                }
             }
 
+            MessageBox.Show(fileContent, "File Content at path: " + filePath, MessageBoxButtons.OK);
             settings = board.LoadBoard(filePath);
 
             if (settings[0] == '1') player = true; else player = false;
@@ -173,8 +189,36 @@ namespace ConnectFourForm
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            filePath = Console.ReadLine();
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            saveFileDialog1.FilterIndex = 2;
+            saveFileDialog1.Title = "Save a ConnectFour File";
+            saveFileDialog1.ShowDialog();
+            
+
+            // If the file name is not an empty string open it for saving.
+            if (saveFileDialog1.FileName != "")
+            {
+                System.IO.FileStream fs =
+                    (System.IO.FileStream)saveFileDialog1.OpenFile();
+                /**
+                 * 
+                String boardString = "";
+                String[] boardStringArray = board.CreateBoardFile(player, p1, p2);
+                foreach (String line in boardStringArray)
+                {
+                    boardString += line.ToString();
+                }
+                 
+                */
+
+                filePath = saveFileDialog1.FileName;
+                fs.Close();
+            }
             board.SaveBoard(filePath, player, p1, p2);
+            //board.SaveBoard(filePath, player, p1, p2);
+            //File.WriteAllText(saveFileDialog1.FileName, string.Join(String.Empty, board.CreateBoardFile(player, p1, p2)));
+            
         }
 
         private void panel1_MouseUp(object sender, EventArgs e)
@@ -186,6 +230,21 @@ namespace ConnectFourForm
             {
                 clickColumn(selectedColumn);
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
